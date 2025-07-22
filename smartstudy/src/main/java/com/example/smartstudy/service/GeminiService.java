@@ -23,7 +23,7 @@ public class GeminiService {
         String hardcodedApiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent";
         
         // IMPORTANT: PASTE YOUR ACTUAL API KEY HERE
-        String hardcodedApiKey = "AIzaSyCh-nu0P9gEENuQwD-9k97i2l9vmMXuFtY"; 
+        String hardcodedApiKey = "PASTE YOUR ACTUAL API KEY HERE"; 
 
         String requestBody = String.format(
             "{\"contents\":[{\"parts\":[{\"text\": \"%s\"}]}]}",
