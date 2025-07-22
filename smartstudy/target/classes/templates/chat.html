@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat - Study Buddy</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 h-screen flex flex-col">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a th:href="@{/dashboard}" class="text-blue-600 hover:text-blue-800">&larr; Back to Dashboard</a>
+                </div>
+                <div class="flex-shrink-0 flex items-center">
+                     <h1 class="text-xl font-bold text-gray-800" th:text="${file.filename}">File Name</h1>
+                </div>
+                <div class="flex items-center">
+                     <form th:action="@{/logout}" method="post">
+                        <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Logout</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Chat Area -->
+    <main class="flex-1 overflow-y-auto p-6">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- THIS IS THE NEWLY ADDED ERROR MESSAGE BLOCK -->
+            <!-- It will only appear if the controller sends an 'errorMessage' attribute -->
+            <div th:if="${errorMessage}" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+                <strong class="font-bold">Error: </strong>
+                <span class="block sm:inline" th:text="${errorMessage}"></span>
+            </div>
+
+            <!-- Chat History Display -->
+            <div id="chat-box" class="space-y-4">
+                <div th:each="msg : ${file.chatMessages}">
+                    <!-- Gemini's Message (AI) -->
+                    <div th:if="${msg.sender == 'GEMINI'}" class="flex items-start space-x-3">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold">AI</div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <p class="text-sm text-gray-800" th:text="${msg.content}"></p>
+                        </div>
+                    </div>
+                    <!-- User's Message -->
+                    <div th:if="${msg.sender == 'USER'}" class="flex items-start justify-end space-x-3">
+                         <div class="bg-green-500 text-white p-4 rounded-lg shadow">
+                            <p class="text-sm" th:text="${msg.content}"></p>
+                        </div>
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-green-500 text-white flex items-center justify-center font-bold">You</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Message Input Footer -->
+    <footer class="bg-white border-t p-4">
+        <div class="max-w-4xl mx-auto">
+             <form th:action="@{'/chat/' + ${file.id} + '/ask'}" method="post" class="flex items-center space-x-3">
+                <input type="text" name="question" placeholder="Ask a question about your document..." required class="flex-1 shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Send</button>
+            </form>
+        </div>
+    </footer>
+
+</body>
+</html>

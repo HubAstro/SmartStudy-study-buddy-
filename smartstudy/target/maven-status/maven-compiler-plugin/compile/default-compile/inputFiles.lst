@@ -1,0 +1,13 @@
+/Users/nishanthkumar/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/smartstudy/src/main/java/com/example/smartstudy/service/UserService.java
+/Users/nishanthkumar/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/smartstudy/src/main/java/com/example/smartstudy/repository/UserRepository.java
+/Users/nishanthkumar/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/smartstudy/src/main/java/com/example/smartstudy/repository/ChatMessageRepository.java
+/Users/nishanthkumar/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/smartstudy/src/main/java/com/example/smartstudy/model/StudyFile.java
+/Users/nishanthkumar/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/smartstudy/src/main/java/com/example/smartstudy/repository/StudyFileRepository.java
+/Users/nishanthkumar/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/smartstudy/src/main/java/com/example/smartstudy/model/ChatMessage.java
+/Users/nishanthkumar/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/smartstudy/src/main/java/com/example/smartstudy/controller/AuthController.java
+/Users/nishanthkumar/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/smartstudy/src/main/java/com/example/smartstudy/model/User.java
+/Users/nishanthkumar/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/smartstudy/src/main/java/com/example/smartstudy/service/FileStorageService.java
+/Users/nishanthkumar/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/smartstudy/src/main/java/com/example/smartstudy/SmartstudyApplication.java
+/Users/nishanthkumar/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/smartstudy/src/main/java/com/example/smartstudy/service/GeminiService.java
+/Users/nishanthkumar/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/smartstudy/src/main/java/com/example/smartstudy/controller/DashboardController.java
+/Users/nishanthkumar/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/smartstudy/src/main/java/com/example/smartstudy/config/WebSecurityConfig.java
